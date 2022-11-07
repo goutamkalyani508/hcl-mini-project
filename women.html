@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>urban/fashion/women</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#main-nav {
+  background-color: #131316;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  height: 45px;
+  z-index:1;
+
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 5px;
+  z-index:1;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.nav a.active {
+  color: #1e1e1e;
+  background: white;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+.logo{
+  float: left;
+  cursor: pointer;
+}
+.flex-box{
+  margin: 20px 0px 24px;
+  overflow: hidden;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  
+  border-radius: 24px;
+  
+}
+.card{
+ border-color: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .08);
+}
+.card-images{
+border-radius:24px;
+transition:.2s;
+cursor:pointer;
+
+
+}
+.card-images:hover{
+  transform: scale(1.3);
+border-color: #ffffff;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .08);
+    
+    
+}
+ 
+.card-content:hover{
+  
+border-color: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .08);
+
+ }
+.card-content{
+font-size:small;
+cursor:pointer;
+transition:.3s;
+}
+.add-to-cart{
+border-radius:24px;
+background-color:blueviolet;
+cursor:pointer;
+color:white;
+transition:-0.4s;
+float:right;
+margin-top:-24px;
+}
+.add-to-cart:hover{
+color:green;
+transition-delay: 0.5s;
+}
+.banner { 
+    margin: 30px 0; 
+}
+.product-featured { 
+    margin-bottom: 30px;
+ }
+ .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.Paragraph-last{
+  color: white;
+  margin-top: -5px;
+  background-color: green;
+}
+.Paragraph-last{
+    -webkit-animation: bannermove 50s linear infinite;
+       -moz-animation: bannermove 50s linear infinite;
+        -ms-animation: bannermove 50s linear infinite;
+         -o-animation: bannermove 50s linear infinite;
+            animation: bannermove 50s linear infinite;
+
+
+}
+@keyframes bannermove {
+  0% {
+    margin-left: 0px
+  }
+  100% {
+    margin-left: -9074px;
+  }
+
+}
+@-moz-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -9074px;
+  }
+ 
+ }
+ @keyframes bannermove {
+  0% {
+    margin-left: 0px
+  }
+  100% {
+    margin-left: -9074px;
+  }
+
+}
+@-moz-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -574px;
+  }
+ 
+ }
+ section#footer{
+  background: rgb(123,134,232);
+  background: linear-gradient(164deg, rgba(123,134,232,1) 0%, rgba(246,140,255,1) 52%, rgba(255,222,50,1) 100%);
+  color: #270942;
+}
+ .footer {
+  display: flex;
+  margin-top:12px ;
+  padding: 0px;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.fMenuTitle {
+  font-size: 16px;
+}
+
+.fList {
+  padding: 0;
+  list-style: none;
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: rgb(1, 1, 1);
+  cursor: pointer;
+}
+
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fInput {
+  padding: 5px;
+}
+
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.fIcons{
+  display: flex;
+}
+
+.fIcon{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.copyright{
+  font-weight: 300;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+.
+
+
+
+
+.blog { margin-bottom: 30px; }
+
+.blog-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.blog-card {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.blog-banner {
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 20px;
+}
+
+.blog-category {
+  width: max-content;
+  color: var(--salmon-pink);
+  font-size: var(--fs-8);
+}
+
+.blog-title {
+  color: var(--eerie-black);
+  font-size: var(--fs-5);
+  font-weight: var(--weight-600);
+  line-height: 1.4;
+  margin-bottom: 5px;
+  transition: var(--transition-timing);
+}
+
+.blog-title:hover { color: var(--salmon-pink); }
+
+.blog-meta {
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+}
+
+.blog-meta cite {
+  font-style: normal;
+  color: var(--davys-gray);
+}
+
+
+
+
+  
+
+</style>
+</head>
+<body>
+    <section id="navbar">
+    
+        <nav id="main-nav">
+          <a href="/home.html" class="">Home</a>
+          <a href="#newSeason">New</a>
+          <a href="#SAREES">Sarees</a>
+          <a href="#Arrivals">Arrivals</a>
+          <a href="">
+            <button type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+            </button>
+          </a>
+        
+        </nav>
+      </section>
+      <section id="newSeason">
+      <img src="women bannerdesign.png" alt=""width="100%">
+      <p style="font-size:xx-large; margin: 20px 510px;"> New Products</p>
+      <section id="flex-box">
+    
+        <div class="row">
+          <div class="column">
+            <div class="card" style="margin-top:20px;">
+                <img src="https://m.media-amazon.com/images/I/71fxzvirehL._AC_UY741_.jpg" alt="" width="" height="250px"class="card-images">
+                <div class="card-content">
+                 <h3>BLENCOT Women's Lightweight Color Block Hooded Sweaters s</h3>
+                 <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                 <div class="category">
+                   <span>M L XL</span>
+                                     </div>
+                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                 </div>
+                 <div class="card-footer">
+                   <div class="wcf-left"><span class="price"><del>Rs.1,499</del><BR> Rs. 999 </span>
+                                                                               
+                   </div>
+                   
+                 
+                 <button class="add-to-cart">
+                     Add To Cart
+                 </button>
+                 </div>
+             </div>
+           </div>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="https://m.media-amazon.com/images/I/7165cIzhCYL._AC_UY741_.jpg" alt="" width="" height="250px"class="card-images">
+                           <div class="card-content">
+                            <h3>Hoodies for Women Camo Leopard Print Tops Pullover Hooded </h3>
+                            <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                            <div class="category">
+                              <span><DEL>S</DEL>M L XL </span>
+                                                </div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                            </div>
+                            <div class="card-footer">
+                              <div class="wcf-left"><span class="price"><del>Rs.2,499</del><BR> Rs.1,299 </span>
+                                                                                          
+                              </div>
+                              
+                            
+                            <button class="add-to-cart">
+                                Add To Cart
+                            </button>
+                            </div>
+                        </div>
+                      </div>
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/81O6ERy19CL._AC_UX569_.jpg" alt="" width="" height="250px"class="card-images">
+                    <div class="card-content">
+                     <h3>Trendy Queen Womens Oversized Half Zip Sweatshirt Quarter Zip Hoodie Sweater</h3>
+                     <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                     <div class="category">
+                       <span>M L XL</span>
+                                         </div>
+                                         <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                         <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                         <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                         <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                         <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                     </div>
+                     <div class="card-footer">
+                       <div class="wcf-left" ><span class="price"><del>Rs.2,499</del><BR> Rs. 999 </span>
+                                                                                   
+                       </div>
+                       
+                     
+                     <button class="add-to-cart">
+                         Add To Cart
+                     </button>
+                     </div>
+                 </div>
+               </div>
+              <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <img src="" alt="" width="" height="250px"class="card-images">
+                           <div class="card-content">
+                            <h3>New Balance Men's 481 V3 Trail Running Shoe</h3>
+                            <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                            <h3><STRONG>SHOP NOW</STRONG></h3>
+                            <div class="category">
+                              <span></span>
+                                                </div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                            </div>
+                            <!-- <div class="card-footer">
+                              <div class="wcf-left"><span class="price"><del>Rs.2,499</del> Rs. 999 </span>
+                                                                                          
+                              </div>
+                              
+                            
+                            <button class="add-to-cart">
+                                Add To Cart
+                            </button> -->
+                            </div>
+                        </div>
+                      </div>
+                <br>
+                <div class="row"s>
+                  <div class="column">
+                    <div class="card" style="margin-top:20px;">
+                        <img src="https://m.media-amazon.com/images/I/71bzu5SMCGL._AC_UY741_.jpg" alt="" width="" height="250px"class="card-images">
+                        <div class="card-content">
+                         <h3>Womens Casual Plaid Long Sleeve Shirt Fall Jacket Shackets</h3>
+                         <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                         <div class="category">
+                           <span>S M L XL XXL</span>
+                                             </div>
+                                             <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                             <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                             <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                             <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                             <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                         </div>
+                         <div class="card-footer">
+                           <div class="wcf-left"><span class="price"><del>Rs.1,499</del><BR> Rs. 999 </span>
+                                                                                       
+                           </div>
+                           
+                         
+                         <button class="add-to-cart">
+                             Add To Cart
+                         </button>
+                         </div>
+                     </div>
+                   </div>
+                  <div class="row"s>
+                    <div class="column">
+                      <div class="card" style="margin-top:20px;">
+                        <img src="https://m.media-amazon.com/images/I/71VPqduAgSL._AC_UX679_.jpg" alt="" width="" height="250px"class="card-images">
+                           <div class="card-content">
+                            <h3>Women's Boho Hippie Harem Pants High Smocked Waist Printed Patchwork Sweatpants</h3>
+                            <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                            <div class="category">
+                              <span>M L XL</span>
+                                                </div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                            </div>
+                            <div class="card-footer">
+                              <div class="wcf-left"><span class="price"><del>Rs.2,499</del><br> Rs. 999 </span>
+                                                                                          
+                              </div>
+                              
+                            
+                            <button class="add-to-cart">
+                                Add To Cart
+                            </button>
+                            </div>
+                        </div>
+                      </div>
+                    <div class="row"s>
+                      <div class="column">
+                        <div class="card" style="margin-top:20px;">
+                            <img src="https://m.media-amazon.com/images/I/61nhNJvz4nL._AC_UY741_.jpg" alt="" width="" height="250px"class="card-images">
+                            <div class="card-content">
+                             <h3>Bofell Lounge Sets for Women Two Piece Outfits with Pockets Loose Fit</h3>
+                             <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                             <div class="category">
+                               <span>M L XL XXL</span>
+                                                 </div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                             </div>
+                             <div class="card-footer">
+                               <div class="wcf-left"><span class="price"><del>Rs.3,499</del><br> Rs. 2,999 </span>
+                                                                                           
+                               </div>
+                               
+                             
+                             <button class="add-to-cart">
+                                 Add To Cart
+                             </button>
+                             </div>
+                         </div>
+                       </div>
+                      <div class="row"s>
+                        <div class="column">
+                          <div class="card" style="margin-top:20px;">
+                            <img src="https://m.media-amazon.com/images/I/71uBAQaSchL._AC_UX569_.jpg" alt="" width="" height="250px"class="card-images">
+                            <div class="card-content">
+                             <h3>Long Sleeve Shirts Square Neck Cute Casual Smocked Tunic Tops </h3>
+                             <p>This is a limited edition product. All modes of online payment are accepted.</p>
+                             <div class="category">
+                               <span>M XL</span>
+                                                 </div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                 <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                             </div>
+                             <div class="card-footer">
+                               <div class="wcf-left"><span class="price"><del>Rs.1,499</del> <br>Rs. 499 </span>
+                                                                                           
+                               </div>
+                               
+                             
+                             <button class="add-to-cart">
+                                 Add To Cart
+                             </button>
+                             </div>
+                         </div>
+                       </div>
+                       <div class="card-content>
+                        <h3><STRONG>SHOP NOW</STRONG></h3>
+                        <div class="category">
+                          <span></span>
+                        </div>
+                                            <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                            <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                            <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                            <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                            <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                        </div>
+                          
+                                    
+                        <div class="banner-last">
+                          <p class="Paragraph-last">
+                            <div class="banner-last">
+                              <p class="Paragraph-last">
+                                //// Buy One, Get One 15% Off. Full-priced footwear only. Use code: BIRD15 at checkout. <u>*Details</u>      Use code: BIRD15  ////  Use code: BIRD100 off //////    Use code: BIRD15  ////  Use code: BIRD100 off //////                 
+                                Buy One, Get One 15% Off. Full-priced footwear only. Use code: BIRD15 at checkout. <u>*Details</u>      Use code: BIRD15  ////  Use code: BIRD100 off //////
+                               
+                              </p>          
+                              <i class="fa fa-smile-o" aria-hidden="true"></i>                     
+                                     
+                          </p>
+                          </div>                             
+                                           
+                        </section>  
+                        <section>
+                          <section ID="SAREES">
+                          <div class="row"s>
+                            <div class="column">
+                              <div class="card" style="margin-top:20px;">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20220429/psON/626ba231f997dd03e2893ecc/-473Wx593H-464238478-red-MODEL.jpg" alt="" width="" height="250px"class="card-images">
+                                <div class="card-content">
+                                 <h3>AWRIYA</STRONG><BR>
+                                  
+Art Silk Floral  Saree with Blouse Piece </h3>
+                                 <p>This is a limited edition product. </p>
+                                 <div class="category">
+                                   <span>size<br><STRONG>FS</STRONG></span>
+                                                     </div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                 </div>
+                                 <div class="card-footer">
+                                   <div class="wcf-left"><span class="price"><del>Rs.2,499</del> <br>Rs.1,499 </span>
+                                                                                               
+                                   </div>
+                                   
+                                 
+                                 <button class="add-to-cart">
+                                     Add To Cart
+                                 </button>
+                                 </div>
+                             </div>
+                           </div>
+                           <div class="row"s>
+                            <div class="column">
+                              <div class="card" style="margin-top:20px;">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20221103/W528/6363faa0aeb269659c705257/gorgone_white_floral_pattern_saree_with_contrast_border.jpg" alt="" width="" height="250px"class="card-images">
+                                <div class="card-content">
+                                 <h3>Floral Pattern Saree with Contrast Border</h3>
+                                 <p>All modes of online payment are accepted.</p>
+                                 <div class="category">
+                                   <span>SIZE<BR><STRONG>FS</STRONG></span>
+                                                     </div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                 </div>
+                                 <div class="card-footer">
+                                   <div class="wcf-left"><span class="price"><del>Rs.1,499</del> <br>Rs. 499 </span>
+                                                                                               
+                                   </div>
+                                   
+                                 
+                                 <button class="add-to-cart">
+                                     Add To Cart
+                                 </button>
+                                 </div>
+                             </div>
+                           </div>
+                           <div class="row"s>
+                            <div class="column">
+                              <div class="card" style="margin-top:20px;">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20221011/Z22T/63450480aeb269659c39c503/gorgone_grey__mysore_silk_ethnic_motifs_saree_.jpg" alt="" width="" height="250px"class="card-images">
+                                <div class="card-content">
+                                 <h3><STRONG>GORGONE</STRONG><BR>
+                                  Mysore Silk Ethnic Motifs Saree</h3>
+                                 <p>Price inclusive of all taxes</p>
+                                 <div class="category">
+                                   <span>SIZE<BR><STRONG>FS</STRONG></span>
+                                                     </div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                 </div>
+                                 <div class="card-footer">
+                                   <div class="wcf-left"><span class="price"><del>Rs.1,499</del> <br>Rs. 499 </span>
+                                                                                               
+                                   </div>
+                                   
+                                 
+                                 <button class="add-to-cart">
+                                     Add To Cart
+                                 </button>
+                                 </div>
+                             </div>
+                           </div>
+                           <div class="row"s>
+                            <div class="column">
+                              <div class="card" style="margin-top:20px;">
+                                <img src="https://assets.ajio.com/medias/sys_master/root/20220913/Kx9T/6320be89aeb269dbb3873f71/-473Wx593H-464967102-green-MODEL4.jpg" alt="" width="" height="250px"class="card-images">
+                                <div class="card-content">
+                                 <h3>GORGONE</STRONG><BR>
+                                  Mysore Silk Ethnic Motifs Saree </h3>
+                                 <p>Price inclusive of all taxes</p>
+                                 <div class="category">
+                                   <span>SIZE<BR><STRONG><BR>M L XL</STRONG></span>
+                                                     </div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                     <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                 </div>
+                                 <div class="card-footer">
+                                   <div class="wcf-left"><span class="price"><del>Rs.1,499</del> <br>Rs. 499 </span>
+                                                                                               
+                                   </div>
+                                   
+                                 
+                                 <button class="add-to-cart">
+                                     Add To Cart
+                                 </button>
+                                 </div>
+                             </div>
+                           </div>
+                        </section>
+                        <div class="row"s>
+                          <div class="column">
+                            <div class="card" style="margin-top:20px;">
+                              <img src="https://sslimages.shoppersstop.com/sys-master/images/h93/h83/27003384397854/FWINC-100736_BEIGE_alt1.jpg_2000Wx3000H" alt="" width=""   height="250px" class="card-images">
+                              <div class="card-content">
+                               <h3>Inc.5
+                                Suede Slip On Womens Casual Wear Sandals
+                                <SPAN style="color: red;font-size: smaller"; >NEW</SPAN><BR>
+                                Mysore Silk Ethnic Motifs Saree</h3>
+                               
+                               <div class="category">
+                                 <span>SIZE<STRONG><BR>6 7 8 </STRONG></span>
+                                                   </div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                               </div>
+                               <div class="card-footer">
+                                 <div class="wcf-left"><span class="price"><del>Rs.3,499</del> <br>Rs.1,499 </span>
+                                                                                             
+                                 </div>
+                                 
+                               
+                               <button class="add-to-cart">
+                                   Add To Cart
+                               </button>
+                               </div>
+                           </div>
+                         </div>
+                         <div class="row"s>
+                          <div class="column">
+                            <div class="card" style="margin-top:20px;">
+                              <img src="https://sslimages.shoppersstop.com/sys-master/images/haf/h8b/26871654252574/S22MADM1S11018_MAUVE_alt2.jpg_2000Wx3000H" alt="" width=""  height="250px"  class="card-images">
+                              <div class="card-content">
+                               <h3><STRONG>Madame</STRONG>
+                                Solid Cotton Round Neck Womens Regular Top<BR>
+                                </h3>
+                               
+                               <div class="category">
+                                 <span>SIZE<STRONG><br>M L XL</STRONG></span>
+                                                   </div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                               </div>
+                               <div class="card-footer">
+                                 <div class="wcf-left"><span class="price"><del>Rs.1,499</del> <br>Rs. 499 </span>
+                                                                                             
+                                 </div>
+                                 
+                               
+                               <button class="add-to-cart">
+                                   Add To Cart
+                               </button>
+                               </div>
+                           </div>
+                         </div>
+                         <div class="row"s>
+                          <div class="column">
+                            <div class="card" style="margin-top:20px;">
+                              <img src="https://sslimages.shoppersstop.com/sys-master/images/h70/hd9/27892445315102/S22MADM2S18013P_PEACH_alt2.jpg_2000Wx3000H" alt="" height="250px"class="card-images">
+                              <div class="card-content">
+                               <h3><strong>Madame</strong>
+                                Solid Cotton Collar Neck Womens Casual Shirt<BR>
+                                Mysore Silk Ethnic Motifs Saree</h3>
+                               
+                               <div class="category">
+                                 <span>SIZE<STRONG><br>M L XL</span>
+                                                   </div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                               </div>
+                               <div class="card-footer">
+                                 <div class="wcf-left"><span class="price"><del>Rs.1,499</del> <br>Rs. 999 </span>
+                                                                                             
+                                 </div>
+                                 
+                               
+                               <button class="add-to-cart">
+                                   Add To Cart
+                               </button>
+                               </div>
+                           </div>
+                         </div>
+                        
+                         
+                         <div class="row"s>
+                          <div class="column">
+                            <div class="card" style="margin-top:20px;">
+                              <img src="https://sslimages.shoppersstop.com/sys-master/images/he0/hcd/28303367700510/MAC-STTA01_NoColour.jpg_2000Wx3000H" alt="" width=""   height="250px" class="card-images">
+                              <div class="card-content">
+                               <h3>Mac
+                                Light Up With Bhumi Pednekar Lipstick Trio
+                                <SPAN style="color: red;font-size: smaller"; >NEW</SPAN><BR>
+                                </h3>
+                               
+                               <div class="category">
+                                 <span>COLOR<STRONG><BR>MIX </STRONG></span>
+                                                   </div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                                                   <div class="wcf-right" style="float: left;"><a href="#" class="buy-btn"><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
+                               </div>
+                               <div class="card-footer">
+                                 <div class="wcf-left"><span class="price"><del>Rs.3,499</del> <br>Rs.1,499 </span>
+                                                                                             
+                                 </div>
+                                 
+                               
+                               <button class="add-to-cart">
+                                   Add To Cart
+                               </button>
+                               </div>
+                           </div>
+                         </div>
+                         
+  <section class="Blog">
+    <div>
+
+      <div class="container">
+
+        
+        
+
+      </div>
+
+    </div>
+
+
+    <div class="blog">
+
+      <div class="container">
+
+        <div class="blog-container has-scrollbar">
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="blog-1.jpg" alt="Clothes Retail KPIs 2021 Guide for Clothes Executives" width="300" class="blog-banner">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Fashion</a>
+
+              <a href="#">
+                <h3 class="blog-title">Clothes Retail KPIs 2021 Guide for Clothes Executives.</h3>
+              </a>
+
+              <p class="blog-meta">
+                By <cite>Mr Admin</cite> / <time datetime="2022-04-06">Apr 06, 2022</time>
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+          
+            <a href="#">
+              <img src="blog-2.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                class="blog-banner" width="300">
+            </a>
+          
+            <div class="blog-content">
+          
+              <a href="#" class="blog-category">Clothes</a>
+          
+              <h3>
+                <a href="#" class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle.</a>
+              </h3>
+          
+              <p class="blog-meta">
+                By <cite>Mr Robin</cite> / <time datetime="2022-01-18">Jan 18, 2022</time>
+              </p>
+          
+            </div>
+          
+          </div>
+
+          <div class="blog-card">
+          
+            <a href="#">
+              <img src="blog-3.jpg" alt="EBT vendors: Claim Your Share of SNAP Online Revenue."
+                class="blog-banner" width="300">
+            </a>
+          
+            <div class="blog-content">
+          
+              <a href="#" class="blog-category">Shoes</a>
+          
+              <h3>
+                <a href="#" class="blog-title">EBT vendors: Claim Your Share of SNAP Online Revenue.</a>
+              </h3>
+          
+              <p class="blog-meta">
+                By <cite>Mr Selsa</cite> / <time datetime="2022-02-10">Feb 10, 2022</time>
+              </p>
+          
+            </div>
+          
+          </div>
+
+          <div class="blog-card">
+          
+            <a href="#">
+              <img src="blog-4.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                class="blog-banner" width="300">
+            </a>
+          
+            <div class="blog-content">
+          
+              <a href="#" class="blog-category">Electronics</a>
+          
+              <h3>
+                <a href="#" class="blog-title">Curbside fashion Trends: How to Win the Pickup Battle.</a>
+              </h3>
+          
+              <p class="blog-meta">
+                By <cite>Mr Pawar</cite> / <time datetime="2022-03-15">Mar 15, 2022</time>
+              </p>
+          
+            </div>
+          
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  
+
+
+
+
+  </section>
+                   
+      
+    </section>
+    <section id="Arrivals">
+      <img src="https://media1.giphy.com/media/EIiJp9cQ3GeEU/giphy.webp?cid=ecf05e470qwfl3nabsr6s9x8ljmhifrbcq0fhv9x32mstngt&rid=giphy.webp&ct=g" style="margin-left: 240PX;">
+    </section>
+    <section id="footer">
+      <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">nike</li>
+                    <li class="fListItem">Essentials</li>
+                    <li class="fListItem">Blazer</li>
+                    <li class="fListItem">cargoes</li>
+                    <li class="fListItem">t-shirts</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@email.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                   
+                    <img src="whats.png" alt="" class="fIcon">
+                    <img src="INSTA.png" alt="" class="fIcon">
+                    <img src="twittter.png" alt="" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@URBAN-fashions. All rights reserved. 2022.</span>
+            </div>
+        </div>
+    </footer>
+    </section>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
+    <script>
+        let navbar = document.getElementById("main-nav");
+let viewportHeight = window.innerHeight;
+let navHeight = document.getElementById("main-nav").offsetHeight;
+
+let navbarLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", e => {
+  scrollpos = window.scrollY;
+  navbarLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+    if (section.offsetTop <= scrollpos + 150 &&
+        section.offsetTop + section.offsetHeight > scrollpos + 150) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
+
+    </script>
+        
+</body>
+</html>
